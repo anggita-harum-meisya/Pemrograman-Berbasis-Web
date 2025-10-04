@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Elemen HTML</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      margin: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+
+    hr {
+      border: 1px solid #000;
+      margin-bottom: 20px;
+    }
+
+    ol {
+      font-size: 18px;
+    }
+
+    img {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: purple;
+      text-decoration: underline;
+    }
+
+    .klik {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .akreditasi {
+      font-size: 18px;
+      color: #2e2e74;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Belajar Elemen HTML</h1>
+  <hr>
+
+  <ol>
+    <li><b>Tulisan tebal</b></li>
+    <li><u>Tulisan garis bawah</u></li>
+    <li><i>Tulisan miring</i></li>
+    <li>Gambar<br>
+      <img src="kerja kelompok.jpg" alt="kerja kelompok" width="300">
+    </li>
+    <li>
+      <a href="https://dinus.ac.id/">Link ke website UDINUS</a><br>
+      <a href="https://anggita-harum-meisya.github.io/Tugas-1_Pemrograman-Berbasis-Web/">Link ke file sendiri</a>
+    </li>
+    <li>
+      Gambar dibawah ini bisa diklik<br>
+      <div class="klik">
+        <a href="https://www.udinus.ac.id">
+          <img src="logo.png" alt="logo" width="100">
+        </a>
+        <a href="https://www.udinus.ac.id">
+          <img src="akreditasi.jpg" alt="akreditasi" width="100">
+        </a>
+      </div>
+      <div class="akreditasi">PERGURUAN TINGGI TERAKREDITASI UNGGUL</div>
+    </li>
+  </ol>
+
+</body>
+</html>
