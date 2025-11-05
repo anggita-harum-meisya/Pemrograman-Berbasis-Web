@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Daily Journal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background: #eeeeee;
+        transition: 0.3s;
+    }
+    .dark-mode {
+        background-color: #121212 !important;
+        color: white !important;
+    }
+    .dark-mode .card {
+        background-color: #1f1f1f !important;
+        color: white !important;
+    }
+    .navbar {
+        padding: 10px 0;
+    }
+    .mode-btn {
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #home {
+        background: #6d757c;
+        padding: 80px 0;
+        color: white;
+    }
+    #article {
+        background: black;
+        padding: 60px 0;
+        color: white;
+        text-align: center;
+    }
+    #article h3 {
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    #gallery {
+        background: #dcdcdc;
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    /* ✅ CARD WARNA ABU */
+    .card {
+        background: #cfcfcf !important;
+    }
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-white shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand fw-bold">My Daily Journal</a>
+
+        <ul class="nav gap-4">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#article">Article</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+
+            <li class="nav-item"><button class="mode-btn" id="darkBtn">🌙</button></li>
+            <li class="nav-item"><button class="mode-btn" id="lightBtn">☀️</button></li>
+        </ul>
+
+    </div>
+</nav>
+
+<section id="home">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-8">
+                <h1 style="font-weight: 700;">Create Memories, Save Memories, Everyday</h1>
+                <p>Mencatat semua kegiatan sehari-hari yang ada tanpa terkecuali</p>
+
+                <h6><span id="date"></span> <span id="time"></span></h6>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <img src="memories.webp" class="img-fluid rounded shadow">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="article">
+    <div class="container">
+        <h3>ARTICLE</h3>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="gallery.webp" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h6>Perpustakaan</h6>
+                        <p>This is wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="ruangkelas.jpeg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h6>Ruang Kelas</h6>
+                        <p>This card has supporting text below as a natural lead-in to additional content.</p>
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="kelompokbelajar.avif" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h6>Kelompok Belajar</h6>
+                        <p>This is wider card with  supporting text below as a natural lead-in  to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="ruangkelas.jpeg" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h6>Ruang Kelas</h6>
+                        <p>This card has supporting text below as a natural lead-in to additional content.</p>
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="container">
+        <h3 class="fw-bold">GALLERY</h3>
+        <img src="gallery.webp" class="img-fluid rounded shadow">
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center p-3">
+    © My Daily Journal 2025
+</footer>
+
+<script>
+    const body = document.body;
+    const darkBtn = document.getElementById("darkBtn");
+    const lightBtn = document.getElementById("lightBtn");
+
+    darkBtn.onclick = () => body.classList.add("dark-mode");
+    lightBtn.onclick = () => body.classList.remove("dark-mode");
+
+    function updateClock() {
+        const now = new Date();
+        document.getElementById("date").innerText =
+            now.toLocaleDateString("id-ID");
+        document.getElementById("time").innerText =
+            now.toLocaleTimeString("id-ID");
+    }
+    setInterval(updateClock, 1000);
+</script>
+
+</body>
+</html>
