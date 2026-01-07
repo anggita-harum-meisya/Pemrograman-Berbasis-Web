@@ -30,7 +30,7 @@
 </form>
 
 <script>
-// Load tabel Selesai
+
 function loadDone(){
     const tbodySelesai = document.querySelector("#tableSelesai tbody");
     tbodySelesai.innerHTML = "";
@@ -42,7 +42,6 @@ function loadDone(){
     });
 }
 
-// Update semua tabel
 function updateTables(){
     const tbodyTugas = document.querySelector("#tableTugas tbody");
     const tbodyKegiatan = document.querySelector("#tableKegiatan tbody");
@@ -77,7 +76,6 @@ function updateTables(){
     loadDone();
 }
 
-// Event Edit/Hapus/Selesai
 function addTableEvents(){
     ["#tableTugas tbody","#tableKegiatan tbody"].forEach(sel=>{
         document.querySelector(sel).addEventListener("click", e=>{
@@ -107,7 +105,6 @@ function addTableEvents(){
     });
 }
 
-// Tombol Hapus Semua tanpa confirm
 document.getElementById("clearDone").addEventListener("click", ()=>{
     localStorage.setItem("tableSelesai",JSON.stringify([]));
     updateTables();
@@ -121,7 +118,7 @@ document.getElementById("clearKegiatan").addEventListener("click", ()=>{
     updateTables();
 });
 
-// Inisialisasi
 updateTables();
 addTableEvents();
+
 </script>
